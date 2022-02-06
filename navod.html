@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>navod</title>
+<link href="navod.css" rel="stylesheet" type="text/css">
+</head>
+	<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+	</script>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#svetlá" onClick="closeNav()">SVETLÁ</a>
+  <a href="#hodiny" onClick="closeNav()">HODINY</a>
+  <a href="#rolety" onClick="closeNav()">ROLETY</a>
+</div>
+<div class="container" onClick="openNav()">
+	<div class="menu"></div>
+	<div class="menu"></div>
+	<div class="menu"></div>
+</div>
+<div id="main" onClick="closeNav()">
+	<div id="Vrch">
+	<h1 id="nazov">NÁVOD</h1>
+	<button class="btn" type="button"> <b> GALÉRIA </b> </button>
+	<button class="btn" type="button"> <b> DOMOV </b> </button>
+	<button class="btn" type="button"> <b> SOURCE CODE </b> </button>
+	<br class="stp">
+	<hr>
+</div>
+<body>
+	<div id="svetlá">
+	<div class="svetlo">
+	<img class="scr" src="Stránka /Nový projekt.png" alt="screenshot z apky" style="float: left">
+	<article>
+	<h1 style="padding-left: 50%">SVETLÁ</h1>
+	<div class="svt"><b>OFF</b>- Po vybratí možnosti "OFF" budú všetky svetlá vypnuté.<br><br></div>
+	<div class="svt"><b>ON</b> - Po vybratí možnosti "ON" budú všetky svetlá zapnuté. <br><br></div>
+	<div class="svt"><b>VOICE</b> - Svetlo je ovládané zvukom. Ak dvakrát tlesknete, tak
+           sa svetlo buď zapne alebo vypne. Nižšie uvedený "clap counter"
+			hovorí, koľko krát ste tleskli.</div>	
+	</article>
+	</div>
+	</div>
+	<br>
+	<br class="stp">
+	<div id="hodiny">
+		<div class="hod">
+			<img class="scr" src="hodiny1.png" alt="screen z apky" style="float: left">
+			<article>
+				<h1 style="padding-left: 50%">HODINY</h1>
+				<div class="svt">
+			    Nastavte správny čas zadaním čísiel do príslušných čísiel. Kliknutím tlačidla "SEND" odošlete čas do arduina a hodiny budú fungovať s vaším časom.
+				</div>
+			</article>
+		</div>
+	</div>
+</body>
+	</div>
+</html>

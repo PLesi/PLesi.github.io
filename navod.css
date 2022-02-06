@@ -1,0 +1,140 @@
+@charset "UTF-8";
+body{
+  background: hsl(204 100% 5%);
+  color: white;
+
+  min-inline-size: 100%;
+  place-content: center;
+  font-family: system-ui;
+  font-size: min(200%, 5vmin);
+  padding-bottom: 40vh;
+}
+#nazov{
+	width: 100%;
+	font-size-adjust: auto;
+	font-size: 5vh;
+	background: radial-gradient(
+			hsl(100 100% 60%),
+			hsl(200 100% 60%)
+	)fixed;
+	background: conic-gradient(
+    hsl(100 100% 60%), 
+    hsl(200 100% 60%), 
+    hsl(100 100% 60%) 
+  ) fixed;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	
+	
+  	text-align:center
+	
+}
+.btn{
+	background-color: springgreen;
+	border: none;
+	padding: 1.5vh;
+	text-align: center;
+	border-radius: 12px;
+	transition-duration: 1.0s;
+	font-family: system-ui;	
+	width: 32.33%;
+	float: left;
+	margin: 3px;
+}
+.btn:hover{
+		box-shadow: 0px 0px 10px 3px #55ffff;
+	
+		
+}
+.btn:active{
+	transition-duration: 0.2s;
+	background-color:  #00b359;
+	box-shadow: 0px 0px 10px 3px #00e6e6;
+}
+.stp{ clear:both; }
+.scr{
+	width: 45vh;
+	padding-top: 30px;
+
+}
+article{
+    width: 100%;
+	font-size-adjust: auto;
+	font-size: 5vh;
+	background: radial-gradient(
+			hsl(100 100% 60%),
+			hsl(200 100% 60%)
+	)fixed;
+	background: conic-gradient(
+    hsl(100 100% 60%), 
+    hsl(200 100% 60%), 
+    hsl(100 100% 60%) 
+  ) fixed;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	font-family: "Dank Mono", monospace;
+	margin: auto;
+	
+	
+}
+.sidenav {
+  height: 100%; 
+  width: 0;
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: hsl(204 100% 4%); 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: mediumspringgreen;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container
+{
+	position: fixed;
+}
+.menu
+{
+  width: 35px;
+  height: 5px;
+  background-color: springgreen;
+  margin: 6px 0;
+}
+.scr{
+	margin-right: 20px;
+}
+.svetlo{
+	padding-top: 5vh;
+	
+}
+.hod{
+	padding-top: 5vh;
+}
+
+
+
