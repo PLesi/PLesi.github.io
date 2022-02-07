@@ -1,76 +1,78 @@
 @charset "UTF-8";
 /* CSS Document */
 
-#nazov{
+#nazov {
 	width: 100%;
 	font-size-adjust: auto;
-	background: radial-gradient(
-			hsl(100 100% 60%),
-			hsl(200 100% 60%)
-	)fixed;
-	background: conic-gradient(
-    hsl(100 100% 60%), 
-    hsl(200 100% 60%), 
-    hsl(100 100% 60%) 
-  ) fixed;
+	background: radial-gradient(hsl(100 100% 60%),
+			hsl(200 100% 60%))fixed;
+	background: conic-gradient(hsl(100 100% 60%),
+			hsl(200 100% 60%),
+			hsl(100 100% 60%)) fixed;
 	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-	
-	
-  	text-align:center
-	
-}
-body {
-  background: hsl(204 100% 5%);
-  color: white;
+	-webkit-text-fill-color: transparent;
 
-  min-inline-size: 100%;
-  place-content: center;
-  font-family: system-ui;
-  font-size: min(200%, 5vmin);
-  padding-bottom: 40vh;
+
+	text-align: center
 }
-.btn{
+
+body {
+	background: hsl(204 100% 5%);
+	color: white;
+
+	min-inline-size: 100%;
+	place-content: center;
+	font-family: system-ui;
+	font-size: min(200%, 5vmin);
+	padding-bottom: 40vh;
+}
+
+.btn {
 	background-color: springgreen;
 	border: none;
 	padding: 1.5vh;
 	text-align: center;
 	border-radius: 12px;
 	transition-duration: 1.0s;
-	font-family: system-ui;	
+	font-family: system-ui;
 	width: 32.33%;
 	float: left;
 	margin: 3px;
 }
-.btn:hover{
-		box-shadow: 0px 0px 10px 3px #55ffff;
-	
-		
+
+.btn:hover {
+	box-shadow: 0px 0px 10px 3px #55ffff;
+
+
 }
-.stp{
+
+.stp {
 	clear: both;
 }
-article{
+
+article {
 	width: 100%;
 	font-size-adjust: auto;
-	background: radial-gradient(
-			hsl(100 100% 60%),
-			hsl(200 100% 60%)
-	)fixed;
-	background: conic-gradient(
-    hsl(100 100% 60%), 
-    hsl(200 100% 60%), 
-    hsl(100 100% 60%) 
-  ) fixed;
+	background: radial-gradient(hsl(100 100% 60%),
+			hsl(200 100% 60%))fixed;
+	background: conic-gradient(hsl(100 100% 60%),
+			hsl(200 100% 60%),
+			hsl(100 100% 60%)) fixed;
 	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-  	text-align:center;
+	-webkit-text-fill-color: transparent;
+	text-align: center;
 	font-family: "Dank Mono", monospace;
 	max-inline-size: 50ch;
 	margin: auto;
 }
-.btn:active{
+
+.btn:active {
 	transition-duration: 0.2s;
-	background-color:  #00b359;
+	background-color: #00b359;
 	box-shadow: 0px 0px 10px 3px #00e6e6;
+}
+
+a {
+	color: black;
+	text-decoration: none;
 }
