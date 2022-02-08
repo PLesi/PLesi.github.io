@@ -3,7 +3,7 @@ body{
   background: hsl(204 100% 5%);
   color: white;
 
-  min-inline-size: 100%;
+  min-inline-size: 99%;
   place-content: center;
   font-family: system-ui;
   font-size: min(200%, 5vmin);
@@ -138,13 +138,30 @@ a{
   color: black;
   text-decoration: none;
 }
-.hore{
+.buttonBackToTop{
   position: fixed;
-  margin: 40% 95% ;
-  align-self: right;
-  
+  text-align: center;
+  background-color: springgreen;
+  color: transparent;
+  border: none;
 
-  color: springgreen;
+  border-radius: 50px;
+
+  bottom: 3px;
+  right: 3px;
+
+  height: 1.5vh;
+  width: 1vh;
+  
+}
+.buttonBackToTop:hover{
+  height: 5vh;
+  width: 5vh;
+
+  border-radius: 12px;
+
+  color: black;
+  
 }
 
 
