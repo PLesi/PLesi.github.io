@@ -140,8 +140,9 @@ a{
 }
 .hore{
   position: fixed;
-  margin: 70vh 0;
-  padding-left: 165vh;
+  margin: 40% 95% ;
+  align-self: right;
+  
 
   color: springgreen;
 }
