@@ -37,7 +37,7 @@ body {
 	font-family: system-ui;
 	width: 32.33%;
 	float: left;
-	margin: 3px;
+	margin: 0.85vh;
 }
 
 .btn:hover {

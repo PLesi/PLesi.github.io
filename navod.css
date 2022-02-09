@@ -39,7 +39,7 @@ body{
 	font-family: system-ui;	
 	width: 32.33%;
 	float: left;
-	margin: 3px;
+	margin: 0.85vh;
 }
 .btn:hover{
 		box-shadow: 0px 0px 10px 3px #55ffff;
