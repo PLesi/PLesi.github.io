@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<script>
+   window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("nazov").style.fontSize = "40px";
+
+    document.getElementsByTagName("button")[0].style.width = "25%";
+    document.getElementsByTagName("button")[1].style.width = "25%";
+    document.getElementsByTagName("button")[2].style.width = "25%";
+
+    document.getElementsByTagName("button")[0].style.marginTop = "20px";
+    document.getElementsByTagName("button")[1].style.marginTop = "20px";
+    document.getElementsByTagName("button")[2].style.marginTop = "20px";
+
+    document.getElementById("header").style.height = "80px";
+    document.getElementById("header").style.clipPath = "none";
+  } else {
+    document.getElementById("nazov").style.fontSize = "9vh";
+    document.getElementsByTagName("button")[0].style.width = "32.33%";
+    document.getElementsByTagName("button")[1].style.width = "32.33%";
+    document.getElementsByTagName("button")[2].style.width = "32.33%";
+
+    document.getElementsByTagName("button")[0].style.margin = "0.85vh";
+    document.getElementsByTagName("button")[1].style.margin = "0.85vh";
+    document.getElementsByTagName("button")[2].style.margin = "0.85vh";
+
+    document.getElementById("header").style.height = "250px";
+    document.getElementById("header").style.clipPath = "polygon(0 0, 100% 0, 100% 80%, 0 calc(100% - 5.5vw)";
+
+  }
+}
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>Galéria</title>
+    <link href="galeria.css" rel="stylesheet" type="text/css">
+    <link rel="hortcut icon" href="imgs/Favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <div id="header">
+    <button class="btn" id="btn1" type="button"> <b> DOMOV </b> </button>
+    <a href="https://plesi.github.io/navod"><button id="btn2" class="btn" type="button"><b> NÁVOD K APLIKÁCIÍ </b>
+    </button></a>
+    <button class="btn" id="btn3" type="button"> <b> SOURCE CODE </b> </button>
+    <h1 id="nazov">Galéria</h1>
+    </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

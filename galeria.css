@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body{
+  background: hsl(204 100% 5%);
+  color: white;
+
+  
+  place-content: center;
+  font-family: system-ui;
+  font-size: min(200%, 5vmin);
+  padding-bottom: 40vh;
+}
+
+
+@keyframes neon{
+	0% {text-shadow: 0px 0px 40px rgb(89, 252, 89);}
+	50% {text-shadow: 0px 5px 30px rgb(93, 255, 93);}
+	100% {text-shadow: 0px 0px 40px rgb(100, 253, 100);}
+
+}
+
+button{
+	background-color: springgreen;
+	border: none;
+	padding: 1.5vh;
+	text-align: center;
+	border-radius: 12px;
+	transition-duration: 1.0s;
+	font-family: system-ui;	
+	width: 32.33%;
+	float: left;
+	margin: 0.85vh;
+}
+button:hover{
+		box-shadow: 0px 0px 10px 3px #55ffff;
+	
+		
+}
+button:active{
+	transition-duration: 0.2s;
+	background-color:  #00b359;
+	box-shadow: 0px 0px 10px 3px #00e6e6;
+}
+
+#header {
+
+
+	height: 300px;
+	background-image: linear-gradient(#061b81,#000f1a);
+	clip-path:polygon(
+	  0 0,
+	  100% 0,
+	  100% 80%,
+	  0 calc(100% - 5.5vw)
+	);
+	width: 100%;
+	font-size: 4vh;
+  	text-align:center;
+	font-family: 'Pacifico',cursive;
+	position: sticky;
+	top: 0;
+	padding-top: 0.1%;
+	transition-duration: 1.0s;
+
+}
+#nazov{
+	animation-name: neon;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	transition-duration: 1s;
+}
+.stp{ clear:both; }
