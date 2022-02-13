@@ -46,7 +46,7 @@ button:active{
 #header {
 	height: 300px;
 
-	background-image: linear-gradient(#061b81,#000f1a);
+	background-image: linear-gradient(#07134e,#000f1a);
 	clip-path:polygon(
 	  0 0,
 	  100% 0,
@@ -71,3 +71,11 @@ button:active{
 	transition-duration: 1s;
 }
 .stp{ clear:both; }
+#vrch{
+	width: 100%;
+	height: 0px;
+	transition-duration: 1.0s;
+	top: 0;
+
+	background-color: #07134e;
+}

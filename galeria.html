@@ -4,7 +4,7 @@
    window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (document.body.scrollTop >= 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("nazov").style.fontSize = "40px";
 
     document.getElementsByTagName("button")[0].style.width = "25%";
@@ -18,6 +18,8 @@ function scrollFunction() {
 
     document.getElementById("header").style.height = "80px";
     document.getElementById("header").style.clipPath = "none";
+
+    document.getElementById("vrch").style.height = "150px";
   } else {
     document.getElementById("nazov").style.fontSize = "9vh";
     document.getElementsByTagName("button")[0].style.width = "32.33%";
@@ -32,6 +34,7 @@ function scrollFunction() {
     document.getElementById("header").style.height = "250px";
     document.getElementById("header").style.clipPath = "polygon(0 0, 100% 0, 100% 80%, 0 calc(100% - 5.5vw)";
 
+    document.getElementById("vrch").style.height = "0px";
   }
 }
 </script>
@@ -42,6 +45,7 @@ function scrollFunction() {
     <link rel="hortcut icon" href="imgs/Favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div id="vrch"></div>
     <div id="header">
     <button class="btn" id="btn1" type="button"> <b> DOMOV </b> </button>
     <a href="https://plesi.github.io/navod"><button id="btn2" class="btn" type="button"><b> NÁVOD K APLIKÁCIÍ </b>
@@ -49,8 +53,29 @@ function scrollFunction() {
     <button class="btn" id="btn3" type="button"> <b> SOURCE CODE </b> </button>
     <h1 id="nazov">Galéria</h1>
     </div>
+    <br><br><br>
+  
+    <div class="container">
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="mySlides">
+        <div class="numbertext">1/5</div>
+        <img src="https://wallpaperaccess.com/full/17606.jpg" alt="nwm" style="width: 70%;">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">2/5</div>
+        <img src="https://wallpaperaccess.com/full/17606.jpg" alt="nwm" style="width: 70%;">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">3/5</div>
+        <img src="https://wallpaperaccess.com/full/17606.jpg" alt="nwm" style="width: 70%;">
+      </div>
+      <a class="prew" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      
+    </div>
+
+
 </body>
 
 </html>
