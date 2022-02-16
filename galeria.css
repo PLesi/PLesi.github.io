@@ -79,3 +79,12 @@ button:active{
 
 	background-color: #07134e;
 }
+.mySlides{
+
+	display: flex;
+	justify-content: center;
+}
+.numbertext
+{
+	
+}
