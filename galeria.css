@@ -79,16 +79,37 @@ button:active{
 
 	background-color: #07134e;
 }
-.mySlides{
+.obr{
+	border-radius: 10px;
 
-	display: flex;
-	justify-content: center;
-	overflow: auto;
-	
+
 }
 #arr:hover{
-	background-color: rgba(0, 0, 0, 0.397);
+	background-color: rgba(2, 2, 2, 0.678);
+}
 
-	
+#text{
+	width: 30%;
+
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 80%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 20px 20px 0;
+ 
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 30%;
+  border-radius: 20px 0 0 20px;
 }
 

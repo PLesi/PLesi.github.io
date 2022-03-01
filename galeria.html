@@ -37,6 +37,29 @@ function scrollFunction() {
     document.getElementById("vrch").style.height = "0px";
   }
 }
+var m = 0;
+
+function plusSlides(n){
+m+=n;
+  switch (m){
+    case 0:
+      document.getElementById("obr1").src = "https://wallpaperaccess.com/full/17606.jpg";
+      
+      break;
+    case 1:
+      document.getElementById("obr1").src="https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg";
+      
+      break;
+    case 2:
+      document.getElementById("obr1").src = "https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FtcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80";
+      
+    break;
+  
+  }
+  
+
+
+}
 </script>
 <head>
     <meta charset="UTF-8">
@@ -54,26 +77,14 @@ function scrollFunction() {
     <h1 id="nazov">Galéria</h1>
     </div>
     <br><br><br>
-  
-    <div class="container">
-
-      <div class="mySlides">
-        <div class="numbertext">1/5</div>
-        <img src="https://wallpaperaccess.com/full/17606.jpg" alt="nwm" style="width: 70%;">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext">2/5</div>
-        <img src="https://wallpaperaccess.com/full/17606.jpg" alt="nwm" style="width: 70%;">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext">3/5</div>
-        <img src="https://wallpaperaccess.com/full/17606.jpg" alt="nwm" style="width: 70%;">
-      </div>
-      <a id="arr" class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a id="arr" class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div id="obrazy">
+      <img src="https://wallpaperaccess.com/full/17606.jpg" alt="obraz" id="obr1" style="width: 70%;" class="obr">
 
       
+      
     </div>
+    <a id="arr" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a id="arr" class="next" onclick="plusSlides(1)">&#10095;</a>
 
 
 </body>
