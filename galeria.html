@@ -39,26 +39,49 @@ function scrollFunction() {
 }
 var m = 0;
 
+var i  = 0;
+var txt = "";
+var speed = 25;
 function plusSlides(n){
 m+=n;
   switch (m){
     case 0:
+      i = 0;
+    
+      document.getElementById("text1").innerHTML='';
+      typeWriter();
+      speed = 50;
       document.getElementById("obr1").src = "https://wallpaperaccess.com/full/17606.jpg";
-      
-      break;
+      txt = " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima et pariatur";
+      typeWriter();  
+    break;
+    
     case 1:
+      i = 0;
+     
+      document.getElementById("text1").innerHTML='';
+      typeWriter();
+      speed = 50;
       document.getElementById("obr1").src="https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg";
-      
-      break;
+      txt = " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima et pariatur";
+      typeWriter();
+    break;
+    
     case 2:
       document.getElementById("obr1").src = "https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FtcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80";
-      
     break;
+    
   
   }
+}
+
+function typeWriter(){
   
-
-
+  if(i<txt.length){
+    document.getElementById("text1").innerHTML += txt.charAt(i);
+    setTimeout(typeWriter, speed);
+    i++;
+  }
 }
 </script>
 <head>
@@ -78,15 +101,18 @@ m+=n;
     </div>
     <br><br><br>
     <div id="obrazy">
-      <img src="https://wallpaperaccess.com/full/17606.jpg" alt="obraz" id="obr1" style="width: 70%;" class="obr">
-
-      
-      
+      <img src="https://wallpaperaccess.com/full/17606.jpg" alt="obraz" id="obr1" style="width: 70%; float: left;"  class="obr">
+      <div id="text1"">
+        <article>
+          
+        </article>
+      </div>
     </div>
+    <div style="clear: both;"></div>
     <a id="arr" class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a id="arr" class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
+    <a id="arr" class="next" onclick="plusSlides(1)">&#10095; </a>
+    <p id="uwu"></p>
+    <a href="https://paypal.me/gimmePeniaze"><img id="logo" src="/imgs/paypal.png" alt="paypalLogo"></a>
 </body>
 
 </html>

@@ -8,7 +8,7 @@ body{
   place-content: center;
   font-family: system-ui;
   font-size: min(200%, 5vmin);
-  padding-bottom: 40vh;
+  
 }
 
 
@@ -83,20 +83,32 @@ button:active{
 	border-radius: 10px;
 
 
+
 }
 #arr:hover{
 	background-color: rgba(2, 2, 2, 0.678);
 }
 
-#text{
-	width: 30%;
+#text1 {
+
+
+	background: radial-gradient(hsl(100 100% 60%),
+			hsl(200 100% 60%))fixed;
+	background: conic-gradient(hsl(100 100% 60%),
+			hsl(200 100% 60%),
+			hsl(100 100% 60%)) fixed;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-align: center;
+	font-family: "Dank Mono", monospace;
+
 
 }
 .prev,
 .next {
   cursor: pointer;
   position: absolute;
-  top: 80%;
+  top: 85%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
@@ -106,10 +118,17 @@ button:active{
   border-radius: 0 20px 20px 0;
  
 }
-
-/* Position the "next button" to the right */
 .next {
   right: 30%;
   border-radius: 20px 0 0 20px;
+}
+#logo{
+	width: 50px;
+	filter: grayscale(100%);
+	transition-duration: 1s;
+}
+#logo:hover{
+	filter: grayscale(0%);
+	width: 60px;
 }
 
