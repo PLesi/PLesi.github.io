@@ -108,7 +108,7 @@ button:active{
 .next {
   cursor: pointer;
   position: absolute;
-  top: 85%;
+  top: 75%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
