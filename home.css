@@ -1,18 +1,21 @@
 @charset "UTF-8";
 /* CSS Document */
-
-#nazov {
+@keyframes neon{
+	0% {text-shadow: 0px 0px 50px rgb(89, 252, 89);}
+	50% {text-shadow: 0px 0px 25px rgb(69, 211, 69);}
+	100% {text-shadow: 0px 0px 50px rgb(100, 253, 100);}
+}
+#nazov{
+	font-family: 'Courier New', Courier, monospace ;
+	animation-name: neon;
+	animation-duration: 0.01s;
+	animation-iteration-count: infinite;
+	transition-duration: 1.0s;
 	width: 100%;
 	font-size-adjust: auto;
-	background: radial-gradient(hsl(100 100% 60%),
-			hsl(200 100% 60%))fixed;
-	background: conic-gradient(hsl(100 100% 60%),
-			hsl(200 100% 60%),
-			hsl(100 100% 60%)) fixed;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 	text-align: center
 }
+
 
 body {
 	background: hsl(204 100% 5%);
