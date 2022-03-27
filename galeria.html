@@ -1,44 +1,7 @@
 <!doctype html>
 <html>
 <script>
-   window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop >= 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("nazov").style.fontSize = "40px";
-
-    document.getElementsByTagName("button")[0].style.width = "25%";
-    document.getElementsByTagName("button")[1].style.width = "25%";
-    document.getElementsByTagName("button")[2].style.width = "25%";
-
-    document.getElementsByTagName("button")[0].style.marginTop = "20px";
-    document.getElementsByTagName("button")[1].style.marginTop = "20px";
-    document.getElementsByTagName("button")[2].style.marginTop = "20px";
-
-
-    document.getElementById("header").style.height = "80px";
-    document.getElementById("header").style.clipPath = "none";
-
-    document.getElementById("vrch").style.height = "150px";
-  } else {
-    document.getElementById("nazov").style.fontSize = "10vh";
-    document.getElementsByTagName("button")[0].style.width = "32.33%";
-    document.getElementsByTagName("button")[1].style.width = "32.33%";
-    document.getElementsByTagName("button")[2].style.width = "32.33%";
-
-    document.getElementsByTagName("button")[0].style.margin = "0.85vh";
-    document.getElementsByTagName("button")[1].style.margin = "0.85vh";
-    document.getElementsByTagName("button")[2].style.margin = "0.85vh";
-
-
-    document.getElementById("header").style.height = "250px";
-    document.getElementById("header").style.clipPath = "polygon(0 0, 100% 0, 100% 80%, 0 calc(100% - 5.5vw)";
-
-    document.getElementById("vrch").style.height = "0px";
-  }
-}
 var m = 0;
-
 var i  = 0;
 var txt = "";
 var speed = 25;
@@ -47,7 +10,6 @@ m+=n;
   switch (m){
     case 0:
       i = 0;
-    
       document.getElementById("text1").innerHTML='';
       typeWriter();
       speed = 50;
@@ -55,10 +17,9 @@ m+=n;
       txt = " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima et pariatur";
       typeWriter();  
     break;
-    
+
     case 1:
-      i = 0;
-     
+      i = 0;  
       document.getElementById("text1").innerHTML='';
       typeWriter();
       speed = 50;
@@ -66,10 +27,21 @@ m+=n;
       txt = " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima et pariatur";
       typeWriter();
     break;
-    
+
     case 2:
       document.getElementById("obr1").src = "https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FtcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80";
     break;
+    default:
+      i=0;
+      m = 0;
+      
+      document.getElementById("text1").innerHTML='';
+      typeWriter();
+      speed = 50;
+      document.getElementById("obr1").src = "https://wallpaperaccess.com/full/17606.jpg";
+      txt = " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima et pariatur";
+      typeWriter();  
+      break;
     
   
   }
@@ -91,14 +63,18 @@ function typeWriter(){
     <link rel="hortcut icon" href="imgs/Favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div id="vrch"></div>
-    <div id="header">
-    <button class="btn" id="btn1" type="button"> <b> DOMOV </b> </button>
-    <a href="https://plesi.github.io/navod"><button id="btn2" class="btn" type="button"><b> NÁVOD K APLIKÁCIÍ </b>
-    </button></a>
-    <button class="btn" id="btn3" type="button"> <b> SOURCE CODE </b> </button>
-    <h1 id="nazov">Galéria</h1>
+    <header>
+      <div id="Vrch">
+        <h1 id="nazov">GALÉRIA</h1>
+
+        <a href="https://plesi.github.io/galeria"><button class="btn" type="button"> <b> GALÉRIA </b> </button></a>
+        <a href="https://plesi.github.io/navod"><button class="btn" type="button"><b> NÁVOD K APLIKÁCIÍ </b>
+        </button></a>
+        <button class="btn" type="button"> <b> SOURCE CODE </b> </button>
+        <br class="stp">
+        <hr>
     </div>
+    </header>
     <br>
     <div id="obrazy">
       <img src="https://wallpaperaccess.com/full/17606.jpg" alt="obraz" id="obr1" style="width: 70%; float: left;"  class="obr">

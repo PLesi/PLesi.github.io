@@ -11,15 +11,12 @@
 			hsl(100 100% 60%)) fixed;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-
-
 	text-align: center
 }
 
 body {
 	background: hsl(204 100% 5%);
 	color: white;
-
 
 	place-content: center;
 	font-family: system-ui;
