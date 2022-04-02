@@ -52,7 +52,7 @@ button:active{
 }
 #text1 {
 	background: radial-gradient(hsl(100 100% 60%),
-			hsl(200 100% 60%))fixed;
+			hsl(200 100% 60%)),fixed;
 	background: conic-gradient(hsl(100 100% 60%),
 			hsl(200 100% 60%),
 			hsl(100 100% 60%)) fixed;
