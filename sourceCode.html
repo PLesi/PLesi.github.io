@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Source Code</title>
+    <link href="sourceCode.css" rel="stylesheet" type="text/css">
+    <link rel="hortcut icon" href="imgs/Favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="prism.css">
+
+</head>
+
+<body>
+    <script src="prism.js"></script>
+    <script>
+        function copyTextF() {
+
+            const copyText = document.getElementById("FirsCode").textContent;
+            const textArea = document.createElement('textarea');
+            textArea.textContent = copyText;
+            document.body.append(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            alert("Copied!");
+        }
+    </script>
+    <header>
+        <div id="Vrch">
+            <h1 id="nazov">SOURCE CODE</h1>
+            <a href="https://plesi.github.io/galeria"><button class="btn" type="button"> <b> GALÉRIA </b> </button></a>
+            <a href="https://plesi.github.io"><button class="btn" type="button"> <b> DOMOV </b> </button></a>
+            <a href="https://plesi.github.io/navod"><button class="btn" type="button"><b> NÁVOD K APLIKÁCIÍ
+                    </b></button></a>
+            <br class="stp">
+            <hr>
+        </div>
+    </header>
+    <article>
+        Program pre zapojenie roliet so svetlami:
+        <br>
+        <br>
+    </article>
+    <div class="codeBlock">
+
+        <pre class="line-numbers">
+            <div id="copyIcon"> <img onclick="copyTextF()" src="imgs/copy-32.png"></div>
+        <code class="language-Arduino" id="FirsCode">
+
+#define REMOTEXY_MODE__HARDSERIAL
+
+#include &lt;RemoteXY.h&gt;
+
+#define REMOTEXY_SERIAL Serial
+#define REMOTEXY_SERIAL_SPEED 9600
+
+int clap = 0;
+bool Lock = true;
+
+// RemoteXY configurate  
+#pragma pack(push, 1)
+uint8_t RemoteXY_CONF[] =   // 275 bytes
+  { 255,3,0,13,0,12,1,16,25,5,129,0,4,37,54,7,1,135,73,110,
+  116,101,108,105,103,101,110,116,110,195,161,32,105,122,98,97,0,129,0,3,
+  46,56,6,1,135,111,118,108,195,161,100,97,110,195,161,32,97,114,100,117,
+  105,110,111,109,0,131,1,22,92,19,6,1,135,24,68,111,109,111,118,0,
+  131,0,1,92,19,6,2,135,24,83,118,101,116,108,195,161,0,131,0,43,
+  92,19,6,3,135,24,82,111,108,101,116,121,0,70,144,2,2,9,9,2,
+  27,237,0,3,3,2,31,12,34,2,135,24,129,0,19,33,18,6,2,135,
+  79,70,70,0,129,0,19,44,18,6,2,135,79,78,0,129,0,20,55,19,
+  6,2,135,86,79,73,67,69,0,67,5,46,62,10,5,2,24,135,11,129,
+  0,13,62,32,5,2,135,99,108,97,112,32,99,111,117,110,116,101,114,58,
+  0,131,0,54,1,8,7,4,135,24,105,0,129,0,26,1,13,6,4,135,
+  72,101,108,112,0,1,2,21,29,23,8,3,136,24,226,150,179,0,129,0,
+  15,11,34,11,3,136,82,111,108,101,116,121,0,1,2,21,72,23,8,3,
+  136,24,226,150,189,0,66,65,23,39,19,31,3,26,137 };
+  
+// this structure defines all the variables and events of your control interface 
+struct {
+
+    // input variables
+  uint8_t sel1; // =0 if select position A, =1 if position B, =2 if position C, ... 
+  uint8_t upBtn1; // =1 if button pressed, else =0 
+  uint8_t downBtn1; // =1 if button pressed, else =0 
+
+    // output variables
+  uint8_t led1; // led state 0 .. 1 
+  char txt1[11];  // string UTF8 end zero 
+  int8_t lvl1; // =0..100 level position 
+
+    // other variable
+  uint8_t connect_flag;  // =1 if wire connected, else =0 
+
+} RemoteXY;
+#pragma pack(pop)
+
+
+
+void setup() 
+{
+  RemoteXY_Init (); 
+  
+  pinMode(8,OUTPUT);  //lights
+  pinMode(9,OUTPUT);  //engine
+  pinMode(10,OUTPUT); //engine
+  
+  Serial.begin(9600);
+}
+int val;
+void lights()
+{
+  val = analogRead(0);
+  if(RemoteXY.sel1 == 0)
+  {
+      digitalWrite(8,LOW);
+    }
+  
+  else if(RemoteXY.sel1 == 1)
+  {
+      digitalWrite(8,HIGH);
+    }
+    
+  else
+  {
+      if(val&gt;=20) //nastaviť citlivosť
+      {
+        if(Lock)
+        {
+          clap++;
+          if(clap==2){
+            Lock = false;
+            digitalWrite(8,HIGH);
+          }
+        }
+        else if(!Lock)
+        {
+          clap--;
+          delay(100);
+          if(clap==0)
+          {
+              Lock = true;
+              digitalWrite(8,LOW);
+              clap=0;
+            }
+           }
+          }
+      Serial.println(val,DEC);//print the sound value to serial
+      delay(100);
+    }
+  }
+
+void blinds()
+{
+    if(RemoteXY.downBtn1 == 1)
+    {
+        digitalWrite(9,LOW);
+        digitalWrite(10,HIGH);
+
+      }
+    else if(RemoteXY.upBtn1 == 1)
+    {
+        digitalWrite(9,HIGH);
+        digitalWrite(10,LOW);
+
+      }
+    else
+    {
+        digitalWrite(9,LOW);
+        digitalWrite(10,LOW);
+      }
+  }
+
+void loop() 
+{ 
+  RemoteXY_Handler ();
+  lights();
+  blinds();
+}
+        </code>
+    </pre>
+    </div>
+
+</body>
+
+</html>
