@@ -266,6 +266,52 @@ void loop()
     </code>
   </pre>
 </div>
+<br>
+  <hr>
+  <article>
+    <br>
+    Program pre zapojenie LED matrixu:
+    <br>
+    <br>
+  </article>
+<div class="codeBlock">
+  <pre>
+    <div id="copyIcon"> <img onclick="copyTextF('ThirdCode')" src="imgs/copy-32.png"></div> 
+    <code class="language-Arduino" id="ThirdCode">
+
+#include "MeOrion.h"
+
+MeLEDMatrix ledMx(11,10);
+
+void setup()
+{
+  ledMx.setBrightness(6);
+  ledMx.setColorIndex(1);
+  Serial.begin(9600);
+}
+  char *s = "INTELIGENTNA IZBA"; 
+  char *m = "TUZINSKY a PLESKO";  
+  char *n = "IV.P";
+  
+void loop()
+{
+    
+  for(int i =15; i >= -100; i--){
+    ledMx.drawStr(i,7,s);
+    delay(100);
+    }
+  for(int i =15; i >= -100; i--){
+    ledMx.drawStr(i,7,m);
+    delay(100);
+    }
+  for(int i =15; i >= -75; i--){
+    ledMx.drawStr(i,7,n);
+    delay(100);
+    }
+  }
+    </code>
+  </pre>
+</div>
 </body>
 
 </html>
