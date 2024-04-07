@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Franklin+Gothic+Demi">
+
+    <title>StarWarsEP3</title>
+</head>
+<body>
+
+<div id="header" class="header">
+    <h1 id = "blueText">A long time ago in a galaxy far,
+        <br>far away....</h1>
+    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Star_Wars_Logo..png">
+    <h1 id="title">Episode III: Revenge of the Sith</h1>
+</div>
+<div class="about">
+    <h2>About</h2>
+    <p>Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.</p>
+
+</div>
+<div class="rectangle" id="charScreen">
+    <div class="menu">
+        <div class="dropDown">
+            <button class="dropBtn">Characters</button>
+            <div class="dropContent">
+                <a href="#" onclick="showCharacter('Anakin')">Anakin Skywalker</a>
+                <a href="#" onclick="showCharacter('Obi-Wan')">Obi-Wan Kenobi</a>
+                <a href="#" onclick="showCharacter('Padme')">Padme Amidala</a>
+                <a href="#" onclick="showCharacter('Palpatine')">Palpatine</a>
+                <a href="#" onclick="showCharacter('General Grievous')">General Grievous</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="character">
+        <div class="abtChar">
+            <h2 id="CharacterName">Star Wars characters</h2>
+            <p id="CharacterInfo">Choose a character you want know more about </p>
+        </div>
+        <div class="imgChar">
+            <img id="charImg" src="https://freepngimg.com/download/star_wars/104636-r2-d2-free-hd-image.png" alt="Character Image">
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script src="indexJS.js"></script>
+</body>
+
+</html>
