@@ -18,6 +18,7 @@ body{
     width: auto;
     height: 15vw;
     position: relative;
+
 }
 .header #title{
     margin-top: -1vw;
@@ -67,62 +68,6 @@ body{
 }
 
 
-.dropBtn{
-    background-color: #f6cd2a;
-    color: #000000;
-    padding: 16px;
-    font-size: 1vw;
-    border: none;
-    cursor: pointer;
-    border-radius: 1vw;
-    margin-left: 1vw;
-    height: 4vw;
-}
-.dropContent{
-    border-radius: 1vw;
-    height: 4vw;
-    min-width: 200px;
-    white-space: nowrap;
-    display: none;
-    position: absolute;
-    flex-direction: row;
-    background-color: #9c9c9c;
-
-    font-family: 'Franklin Gothic Demi', sans-serif;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    left: 100%;
-    top: 0;
-}
-.dropContent a{
-    color: black;
-    padding: 12px 16px;
-    width: auto;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-.dropContent a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropContent {display: flex; flex-direction: row;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropBtn {background-color: #ffd730;}
-
 
 .rectangle{
     background: #2b2b2b;
@@ -136,29 +81,58 @@ body{
     margin-left: auto;
 }
 .rectangle #CharacterName{
-    color: #d3d3d3;
+    color: whitesmoke;
     text-align: center;
     font-size: 2vw;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 1vw;
+
 }
 
+/* Buttons for character navigation*/
+.CharMenu{
+    float: left;
+    height: 30vw;
+    width: 8vw;
+    border-radius: 1vw 0 0 1vw;
+    background: #151515;
+    display: flex;
+    flex-direction: column;
+}
 
-.rectangle #CharacterInfo{
+.CharMenu button{
+    height: 25%;
+    background: #f6cd2a;
+    box-shadow: none;
+    border: black thick solid;
+
+    font-family: 'Franklin Gothic Demi', sans-serif;
+    font-weight: bolder;
+    font-size: 1vw;
+}
+.CharMenu button:hover{
+    background: #ba9a1d;
+}
+.CharMenu #firstBtn{
+    border-radius: 1vw 0 0 0 ;
+}
+.CharMenu #lastBtn{
+    border-radius: 0 0 0 1vw;
+}
+
+.rectangle #abtChar{
     display: block;
     width: auto;
     max-width: 50%;
-    padding: 20px;
-    height: 35vw;
-    float: left;
+    padding: 1vw 1vw 1vw 4vw;
+    text-align: center;
     font-size: 1.5vw;
     font-family: 'Franklin Gothic Demi', sans-serif;
-    font-optical-sizing: auto;
     height: auto;
     color: #d3d3d3;
     line-height: 1.5;
-
+    float: left;
 }
 
 .rectangle #charImg {
@@ -169,20 +143,30 @@ body{
     margin-top: 0;
 
 
+
 }
 
 
 .about{
-    color: white;
+    color: #ffff00;
     text-align: center;
     font-size: 1.5vw;
+    font-family: 'Franklin Gothic Demi', sans-serif;
+    font-weight: bolder;
+    line-height: 2vw;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 .star {
     position: absolute;
     width: 2px;
     height: 2px;
     background: white;
+    z-index: -1;
 }
+
 
 .star::before, .star::after {
     content: "";

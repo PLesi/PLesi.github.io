@@ -1,14 +1,13 @@
-let numStars = 100;
+let numStars = 200;
 
 function getRandom(){
-    var header = document.getElementById("header");
-    var y = header.offsetWidth;
-    var x = header.offsetHeight;
+    var stars = document.getElementById("header");
+    var x = stars.offsetHeight;
+    var y = stars.offsetWidth;
     var randX = Math.floor(Math.random() * x);
     var randY = Math.floor(Math.random() * y);
     return [randX, randY];
 }
-
 for(let i = 0; i < numStars; i++){
     var star = document.createElement("div");
     star.className = "star";
