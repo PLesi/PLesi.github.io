@@ -8,14 +8,25 @@ function getRandom(){
     var randY = Math.floor(Math.random() * y);
     return [randX, randY];
 }
-for(let i = 0; i < numStars; i++){
-    var star = document.createElement("div");
-    star.className = "star";
-    var coords = getRandom();
-    star.style.top = coords[0] + "px";
-    star.style.left = coords[1] + "px";
-    document.getElementById("header").appendChild(star);
+function stars() {
+    for (let i = 0; i < numStars; i++) {
+        var star = document.createElement("div");
+        star.className = "star";
+        var coords = getRandom();
+        star.style.top = coords[0] + "px";
+        star.style.left = coords[1] + "px";
+        document.getElementById("header").appendChild(star);
+    }
 }
+function removeStars(){
+    let stars = document.getElementsByClassName("star");
+    for (let i = 0; i < stars.length; i++) {
+        stars[i].remove();
+    }
+}
+
+stars();
+
 
 const characters = [
     {
@@ -83,9 +94,9 @@ const updateCharacter = (character) =>{
     charImg.src = character.img;
 };
 
-function showCharacter(character){
+function showCharacter(character) {
     event.preventDefault();
-    switch (character){
+    switch (character) {
         case "Anakin":
             updateCharacter(characters[0]);
             break;
@@ -102,5 +113,35 @@ function showCharacter(character){
             updateCharacter(characters[4]);
             break;
     }
-
 }
+
+window.onscroll = function() {scrollFun();}
+
+
+function scrollFun(){
+    let logo = document.getElementById("logo");
+    let title = document.getElementById("title");
+    let header = document.getElementById("header");
+    let blueText = document.getElementById("blueText");
+
+    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+        logo.style.marginLeft = "0";
+        logo.style.height = "5.5vw";
+        logo.style.top = "1vw";
+        logo.style.paddingLeft = "4vw";
+        title.style.position = "relative";
+        title.style.top = "-1.5vw";
+        // Add the no-animation class
+    } else {
+        logo.style.marginLeft = "auto";
+        logo.style.height = "15vw";
+        logo.style.top = "0";
+        logo.style.paddingLeft = "0";
+        title.style.top = "10vw";
+        title.style.position = "static";
+        header.style.top = "0";
+        header.style.width = "100%";
+    }
+}
+
+

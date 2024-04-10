@@ -7,7 +7,11 @@ body{
 
 .header{
     border: white 1px solid;
+    border-radius: 1vw;
     position: sticky;
+    top: 0;
+    background: black;
+
 }
 
 .header #logo{
@@ -18,7 +22,7 @@ body{
     width: auto;
     height: 15vw;
     position: relative;
-
+    transition: 0.2s;
 }
 .header #title{
     margin-top: -1vw;
@@ -26,12 +30,16 @@ body{
     color: #FFFF00;
     font-size: 2vw;
     font-family: 'Franklin Gothic Demi', sans-serif;
+    transition: 0.2s;
 }
 
 .header #title, .header #logo{
     opacity: 0;
-    animation: fadeIn 2s ease-in-out 9s forwards;
+    animation: fadeIn 2s ease-in-out 6s forwards;
 
+}
+.no-animation {
+    animation: none !important;
 }
 
 .header #blueText{
@@ -43,7 +51,12 @@ body{
     color: cyan;
     font-size: 3vw;
     opacity: 0;
-    animation: intro 6s ease-in-out 1s forwards;
+    animation: intro 5s ease-in-out 1s forwards;
+
+}
+#empty{
+    height: 0;
+    border: white 1px solid;
 
 }
 @keyframes intro {
@@ -134,18 +147,13 @@ body{
     line-height: 1.5;
     float: left;
 }
-
 .rectangle #charImg {
     display: block;
     width: auto;
     height: 30vw;
     margin-left: auto;
     margin-top: 0;
-
-
-
 }
-
 
 .about{
     color: #ffff00;
@@ -185,3 +193,34 @@ body{
 .star::after {
     transform: rotate(-45deg);
 }
+
+.gallery{
+    width: 80%;
+    margin-right: auto;
+}
+.gallery #galleryTitle{
+
+}
+.gallery #imageHolder{
+    background: #6a6a6a;
+    border: #f6cd2a 4px solid;
+    border-radius: 1vw;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
