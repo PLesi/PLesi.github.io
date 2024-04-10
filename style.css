@@ -197,6 +197,7 @@ body{
 .gallery{
     width: 80%;
     margin-right: auto;
+    margin-left: auto;
 }
 .gallery #galleryTitle{
 
