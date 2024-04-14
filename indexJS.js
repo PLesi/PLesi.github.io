@@ -1,15 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
     const popupOverlay = document.getElementById('popupOverlay');
-    const popup = document.getElementById('popup');
     const closePopup = document.getElementById('closePopup');
     // Function to open the popup
     function openPopup() {
         popupOverlay.style.display = 'block';
     }
-    function closePopupFunc() {
+    function closePopupFunc()  {
         popupOverlay.style.display = 'none';
         document.body.classList.add('animate')
     }
+
+
   openPopup();
     closePopup.addEventListener('click', closePopupFunc);
     popupOverlay.addEventListener('click', function (event) {
@@ -20,7 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // You can customize and expand these functions based on your specific requirements.
 });
 
-
+function agree() {
+    popupOverlay.style.display = 'none';
+    document.body.classList.add('animate')
+}
 let numStars = 200;
 
 function getRandom(){
@@ -145,7 +149,6 @@ function showCharacter(character) {
 }
 
 window.onscroll = function() {scrollFun();}
-
 
 function scrollFun(){
     let logo = document.getElementById("logo");

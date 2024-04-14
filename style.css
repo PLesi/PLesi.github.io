@@ -32,6 +32,7 @@ body.animate .header #title, body.animate .header #logo{
     background: #6a6a6a;
     padding: 2.5vw;
     border-radius: 1vw;
+    border: #ffd730 1px solid;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .popup-content {
@@ -46,7 +47,7 @@ body.animate .header #title, body.animate .header #logo{
     right: 10px;
     font-size: 2vw;
     cursor: pointer;
-    color: #333;
+    color: #ffe81f;
 }
 .popup button {
     background-color: #ffe81f;
@@ -56,6 +57,10 @@ body.animate .header #title, body.animate .header #logo{
     border-radius: 5px;
     cursor: pointer;
     font-size: 1vw;
+    transition: 0.2s;
+}
+.popup button:hover {
+    background-color: #ba9a1d;
 }
 .about hr{
     border: 1px solid #6a6a6a;
@@ -73,7 +78,6 @@ body.animate .header #title, body.animate .header #logo{
     width: 65%;
     margin-left: auto;
     margin-right: auto;
-
 }
 .header{
     border: white 1px solid;
@@ -82,9 +86,7 @@ body.animate .header #title, body.animate .header #logo{
     top: 0;
     width: 100%;
     background: black;
-
 }
-
 .header #logo{
     display: block;
     top: 0;
@@ -95,8 +97,8 @@ body.animate .header #title, body.animate .header #logo{
     height: 15vw;
     position: relative;
     opacity: 0;
-
 }
+
 .header #title{
     margin-top: -1vw;
     text-align: center;
@@ -106,7 +108,6 @@ body.animate .header #title, body.animate .header #logo{
     transition: 0.2s;
     opacity: 0;
 }
-
 
 .no-animation {
     animation: none !important;
@@ -295,6 +296,7 @@ body.animate .header #title, body.animate .header #logo{
         vertical-align: middle;
         width: 100%;
     }
+
 
 
     .trailer{
