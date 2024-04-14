@@ -1,30 +1,59 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('closePopup');
+    // Function to open the popup
+    function openPopup() {
+        popupOverlay.style.display = 'block';
+    }
+    function closePopupFunc() {
+        popupOverlay.style.display = 'none';
+        document.body.classList.add('animate')
+    }
+  openPopup();
+    closePopup.addEventListener('click', closePopupFunc);
+    popupOverlay.addEventListener('click', function (event) {
+        if (event.target === popupOverlay) {
+            closePopupFunc();
+        }
+    });
+    // You can customize and expand these functions based on your specific requirements.
+});
+
+
 let numStars = 200;
 
 function getRandom(){
-    var stars = document.getElementById("header");
-    var x = stars.offsetHeight;
-    var y = stars.offsetWidth;
-    var randX = Math.floor(Math.random() * x);
-    var randY = Math.floor(Math.random() * y);
+    let stars = document.getElementById("header");
+    let x = stars.offsetHeight;
+    let y = stars.offsetWidth;
+    let randX = Math.floor(Math.random() * x);
+    let randY = Math.floor(Math.random() * y);
     return [randX, randY];
 }
 function stars() {
     for (let i = 0; i < numStars; i++) {
-        var star = document.createElement("div");
+        let star = document.createElement("div");
         star.className = "star";
-        var coords = getRandom();
+        let coords = getRandom();
         star.style.top = coords[0] + "px";
         star.style.left = coords[1] + "px";
         document.getElementById("header").appendChild(star);
     }
 }
-function removeStars(){
+function hideStars(){
     let stars = document.getElementsByClassName("star");
     for (let i = 0; i < stars.length; i++) {
-        stars[i].remove();
+        stars[i].style.opacity="0";
     }
 }
-
+function showStars(){
+    let stars = document.getElementsByClassName("star");
+    for (let i = 0; i < stars.length; i++) {
+        stars[i].style.transition="0.5s";
+        stars[i].style.opacity="1";
+    }
+}
 stars();
 
 
@@ -53,7 +82,7 @@ const characters = [
          " including epic duels, tragic losses, and victories that would bring hope to the galaxy.",
     },
     {
-        name: "Padme Amidala",
+        name: "Padmé Amidala",
         img: "https://clipart-library.com/newhp/star-wars-padme-amidala-icon-png-clipart-image-iconbugcom-padme-amidala-png-256_256.png",
         bio: "Padmé Amidala was a courageous, hopeful leader," +
             " serving as Queen and then Senator of Naboo -- and was also handy with a blaster." +
@@ -123,7 +152,7 @@ function scrollFun(){
     let title = document.getElementById("title");
     let header = document.getElementById("header");
     let blueText = document.getElementById("blueText");
-
+    let star = document.getElementsByClassName("star");
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
         logo.style.marginLeft = "0";
         logo.style.height = "5.5vw";
@@ -131,7 +160,11 @@ function scrollFun(){
         logo.style.paddingLeft = "4vw";
         title.style.position = "relative";
         title.style.top = "-1.5vw";
-        // Add the no-animation class
+        logo.style.animation= "none !important";
+        title.style.animation= "none !important";
+        blueText.style.animation ="none !important";
+        document.getElementById("empty").style.height = "8vw";
+        hideStars();
     } else {
         logo.style.marginLeft = "auto";
         logo.style.height = "15vw";
@@ -141,7 +174,9 @@ function scrollFun(){
         title.style.position = "static";
         header.style.top = "0";
         header.style.width = "100%";
+        blueText.style.animation ="none !important";
+        document.getElementById("empty").style.height = "0";
+        showStars();
+
     }
 }
-
-

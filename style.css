@@ -3,41 +3,111 @@ body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: lightgrey;
+}
+body.animate .header #blueText{
+    animation: intro 5s ease-in-out forwards;
 }
 
+body.animate .header #title, body.animate .header #logo{
+    animation: fadeIn 1s ease-in-out 5s forwards;
+
+}
+.popup-overlay {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+.popup {
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #6a6a6a;
+    padding: 2.5vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.popup-content {
+    text-align: center;
+    font-size: 1.5vw;
+    color: whitesmoke;
+
+}
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2vw;
+    cursor: pointer;
+    color: #333;
+}
+.popup button {
+    background-color: #ffe81f;
+    color: #3e3e3e;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1vw;
+}
+.about hr{
+    border: 1px solid #6a6a6a;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about{
+    color: #ffe81f;
+    text-align:center;
+    font-size: 1.5vw;
+    font-family: 'Franklin Gothic Demi', sans-serif;
+    font-weight: normal;
+    line-height: 1.8vw;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
 .header{
     border: white 1px solid;
     border-radius: 1vw;
     position: sticky;
     top: 0;
+    width: 100%;
     background: black;
 
 }
 
 .header #logo{
     display: block;
+    top: 0;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
     width: auto;
     height: 15vw;
     position: relative;
-    transition: 0.2s;
+    opacity: 0;
+
 }
 .header #title{
     margin-top: -1vw;
     text-align: center;
-    color: #FFFF00;
+    color: #ffe81f;
     font-size: 2vw;
     font-family: 'Franklin Gothic Demi', sans-serif;
     transition: 0.2s;
-}
-
-.header #title, .header #logo{
     opacity: 0;
-    animation: fadeIn 2s ease-in-out 6s forwards;
-
 }
+
+
 .no-animation {
     animation: none !important;
 }
@@ -51,13 +121,9 @@ body{
     color: cyan;
     font-size: 3vw;
     opacity: 0;
-    animation: intro 5s ease-in-out 1s forwards;
-
 }
 #empty{
-    height: 0;
-    border: white 1px solid;
-
+    height: 4px;
 }
 @keyframes intro {
     0%{
@@ -80,8 +146,14 @@ body{
     }
 }
 
-
-
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 .rectangle{
     background: #2b2b2b;
     border-radius: 1vw;
@@ -92,6 +164,8 @@ body{
     width: 90%;
     margin-right: auto;
     margin-left: auto;
+
+    transition: 0.2s;
 }
 .rectangle #CharacterName{
     color: whitesmoke;
@@ -100,7 +174,6 @@ body{
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 1vw;
-
 }
 
 /* Buttons for character navigation*/
@@ -116,7 +189,7 @@ body{
 
 .CharMenu button{
     height: 25%;
-    background: #f6cd2a;
+    background: #ffe81f;
     box-shadow: none;
     border: black thick solid;
 
@@ -154,19 +227,11 @@ body{
     margin-left: auto;
     margin-top: 0;
 }
-
-.about{
-    color: #ffff00;
-    text-align: center;
-    font-size: 1.5vw;
-    font-family: 'Franklin Gothic Demi', sans-serif;
-    font-weight: bolder;
-    line-height: 2vw;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-
+.rectangle #threeThings{
+    transition: 200ms;
 }
+
+
 .star {
     position: absolute;
     width: 2px;
@@ -200,28 +265,138 @@ body{
     margin-left: auto;
 }
 .gallery #galleryTitle{
-
+    color: #ffe81f;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 3vw;
+    font-family: 'Franklin Gothic Demi', sans-serif;
+    font-weight: bolder;
 }
 .gallery #imageHolder{
     background: #6a6a6a;
-    border: #f6cd2a 4px solid;
+    border: #3e3e3e 4px solid;
     border-radius: 1vw;
 }
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
+    padding: 6px;
+}
+    /* Create two equal columns that sits next to each other */
+
+    .column {
+        flex: 25%;
+        padding: 0 4px;
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+
+    .trailer{
+        display: block;
+        margin-left: auto;
+        padding-right: 100px;
+        width: fit-content;
+
+    }
+    #video{
+        border-radius: 1vw;
+        height: 30vw;
+        width: 45vw;
+    }
+    #trH1{
+        padding-top: 0;
+        color: #ffe81f;
+        text-align: center;
+        font-size: 2vw;
+        font-family: 'Franklin Gothic Demi', sans-serif;
+        font-weight: bolder;
+        padding-bottom: 1vw;
+    }
+    .abtTrailer{
+        color: #ffe81f;
+        display: block;
+        float: left;
+        padding-left: 15vw;
+        max-width: 40%;
+        font-size: 1.3vw;
+        text-align: center;
+
+    }
+.review{
+    border: #ffd730 1px solid;
+    border-radius: 1vw;
+    margin-right: auto;
+    color: lightgrey;
+    font-size: 0.9vw;
+    line-height: 1.5vw;
+    text-align: left;
+    font-style: oblique;
+    font-weight: lighter;
+}
+.reviews{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 1vw;
+    padding-left: 2vw;
+    padding-bottom: 1vw;
+    float: left;
+}
+.reviewText{
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+a{
+    text-decoration: none;
+    color: #2af6ef;
+    font-weight: bolder;
+    font-size: 1vw;
+}
+.idmb {
+    width: fit-content;
+    padding: 0 0 0 1vw;
+}
+#reviewsTitle{
+    padding-left: 1vw;
+    font-style: normal;
 }
 
-/* Create two equal columns that sits next to each other */
-.column {
-    flex: 25%;
-    padding: 0 4px;
+.footer{
+    background: black;
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Demi', sans-serif;
+    padding: 1vw;
+    position: relative;
+    bottom: 0;
+    width: 40%;
+    float: right;
 }
+.footerImages{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10vw;
+    padding: 5px;
+    max-width: 14vw;
+    transition: 0.2s;
 
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
 }
-
+#footerText{
+    padding-top: 1vw;
+    color: lightgrey;
+    font-size: 1.5vw;
+    font-family: 'Franklin Gothic Demi', sans-serif;
+    font-weight: bolder;
+}
+.footerImages:hover{
+    transform: scale(1.1);
+}

@@ -12,21 +12,36 @@
 </head>
 <body>
 
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup" id="popup">
+        <span class="close" id="closePopup">&times;</span>
+        <div class="popup-content">
+            <p>This page contain spoilers.<br>Do you want visit the page?</p>
+            <button id="agreeBtn" onclick="agree()">YES</button>
+            <button id="disagreeBtn" onclick="disagree()">NO</button>
+        </div>
+    </div>
+</div>
+
+
 <div id="header" class="header">
     <h1 id = "blueText">A long time ago in a galaxy far,
         <br>far away....</h1>
     <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Star_Wars_Logo..png" alt="*Star Wars logo*" style="color: #ffd730" >
     <h1 id="title">Episode III: Revenge of the Sith</h1>
 </div>
-<div id="empty">
-
-</div>
+<div id="empty"></div>
+<br style="height: 8vw">
 
 <div class="about">
-    <h2>About</h2>
-    <p>Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.</p>
-
+    <hr>
+   <p> Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.
+   </p>
+    <hr>
 </div>
+<br>
+<hr style="color: #ffd730">
+<br>
 <div class="rectangle" id="charScreen">
 
     <div class="character">
@@ -37,26 +52,29 @@
                 <button onclick="showCharacter('Palpatine')">Palpatine</button>
                 <button id = "lastBtn" onclick="showCharacter('General Grievous')">Grievous</button>
         </div>
-        <div id="abtChar">
-            <h2 id="CharacterName">Star Wars characters</h2>
-            <p id="CharacterInfo">Something about main characters of the third Star Wars movie. <br> Choose a character you are interested in <br> and dive deep into hyperspace of knowledge. <br><br> May the force be with you! </p>
-        </div>
-        <div class="imgChar">
-            <img id="charImg" src="https://freepngimg.com/download/star_wars/104636-r2-d2-free-hd-image.png" alt="Character Image">
+        <div id="threeThings">
+            <div id="abtChar">
+                <h2 id="CharacterName" style="transition: 0.2s">Star Wars characters</h2>
+                <p id="CharacterInfo">Something about main characters of the third Star Wars movie. <br> Choose a character you are interested in <br> and dive deep into hyperspace of knowledge. <br><br> May the force be with you! </p>
+            </div>
+            <div class="imgChar">
+                <img id="charImg" src="https://freepngimg.com/download/star_wars/104636-r2-d2-free-hd-image.png" alt="Character Image">
+            </div>
         </div>
     </div>
 
 
 </div>
-
+<br>
+<hr style="color: #ffd730">
 <div class="gallery">
     <h2 id="galleryTitle">GALLERY</h2>
     <div id="imageHolder">
         <div class="row">
             <div class="column">
-                <img src="https://lumiere-a.akamaihd.net/v1/images/image_199f61b1.jpeg?region=0%2C0%2C1560%2C878">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/image_199f61b1.jpeg?region=0%2C0%2C1560%2C878" style="border-radius: 1vw 0 0 0">
                 <img src="https://lumiere-a.akamaihd.net/v1/images/ep3-q4_ee692b80.jpeg">
-                <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150608-27674-5ek0sk_36e06a2b.jpeg">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150608-27674-5ek0sk_36e06a2b.jpeg" style="border-radius: 0 0 0 1vw">
             </div>
             <div class="column">
                 <img src="https://lumiere-a.akamaihd.net/v1/images/ep3-q1_5144c5f1.jpeg">
@@ -64,20 +82,87 @@
                 <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150608-27674-1yp8y91_ce5ea578.jpeg">
             </div>
             <div class="column">
-                <img src="https://lumiere-a.akamaihd.net/v1/images/ep3-q7_7b97320c.jpeg">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/ep3-q7_7b97320c.jpeg" style="border-radius: 0 1vw 0 0 ">
                 <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150608-27674-1wv8hk4_08baba19.jpeg">
-                <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150608-27674-idjurg_08d48a6e.jpeg">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150608-27674-idjurg_08d48a6e.jpeg" style="border-radius: 0 0 1vw 0">
             </div>
         </div>
     </div>
 </div>
+<br><br><br>
+<hr style="color: #ffd730">
+<br>
+<h1 id="trH1">TRAILER</h1>
+<div class ="abtTrailer">
+    <p id="text">
+    <p>War! The Republic is crumbling<br>under attacks by the ruthless<br>Sith Lord, Count Dooku.<br>There are heroes on both sides.<br>Evil is everywhere.<br><br>
+        In a stunning move, the<br>fiendish droid leader, General<br>Grievous, has swept into the<br>Republic capital and kidnapped<br>Chancellor Palpatine, leader of<br>the Galactic Senate.<br><br>
+        As the Separatist Droid Army<br>attempts to flee the besieged<br>capital with their valuable<br>hostage, two Jedi Knights lead a<br>desperate mission to rescue the<br>captive Chancellor....</p>
 
-<!-- TODO: make a better about section -->
-<!-- TODO: maybe add a trailer -->
-<!-- todo: gallery 3x3 -->
-<!-- todo: maybe split the site in half -->
+</div>
+<div class="trailer">
+    <iframe width="760"
+            height="515"
+            src="https://www.youtube.com/embed/5UnjrG_N8hU?si=sK1ohynOfKbJCmnW"
+            title="YouTube video player"
+            id="video">
+    </iframe>
+</div>
+<br>
+<br>
+<hr style="color: #ffd730">
+<div class="reviews">
+    <div class="review">
+        <h2 id="reviewsTitle">REVIEWS</h2>
+        <div class="idmb">
+        <span class="imdbRatingPlugin" data-user="ur180209468" data-title="tt0121766" data-style="p2"><a href="https://www.imdb.com/title/tt0121766/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt="Star Wars: Episode III - Revenge of the Sith (2005) on IMDb" />
+</a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script>
+        </div>
+        <div class="reviewText">
+            <h3 id="review1">"George Lucas has achieved what few artists do; he has created and populated a world of his own. His "Star Wars" movies are among the most influential, both technically and commercially, ever made."</h3>
+            <a href="https://www.rogerebert.com/reviews/star-wars-episode-iii-revenge-of-the-sith-2005">
+            <p id="review1Text">- Roger Ebert</p>
+            </a>
+        </div>
+        <div class="reviewText">
+            <h3 id="review2">"a breathtaking rollercoaster of space battles, lightsaber duels, explosions and acrobatics"</h3>
+            <a href="https://www.bbc.co.uk/films/2005/05/09/star_wars_episode_3_2005_review.shtml">
+            <p id="review2Text">- Paul Arendt</p>
+            </a>
+        </div>
+        <div class="reviewText">
+            <h3 id="review3">"Revenge of the Sith is packed with equally astounding, equally beautiful shots and sequences, especially the many duels"</h3>
+            <a href="https://www2.bfi.org.uk/news-opinion/sight-sound-magazine/reviews-recommendations/star-wars-episode-iii-revenge-sith-archive">
+            <p id="review3Text">- Kim Newman</p>
+            </a>
+        </div>
+</div>
 
-<br style="height: 6vw">
+</div>
+<div class="footer">
+    <h3 id="footerText">LINKS: </h3>
+    <div class="footerLinks">
+        <div class="rowFooter">
+            <div class="columnFooter">
+                <a href="https://www.starwars.com/films/star-wars-episode-iii-revenge-of-the-sith">
+                    <img class="footerImages" src="https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png?region=0,0,586,254" alt="star wars logo" >
+                </a>
+                <a href="https://www.imdb.com/title/tt0121766/">
+                    <img class="footerImages" src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" alt="IMDB logo">
+                </a>
+                <a href="https://www.csfd.sk/film/6172-star-wars-epizoda-iii-pomsta-sithov/prehlad/">
+                    <img class="footerImages" src="https://img.csfd.cz/documents/marketing/logos/logo-white-red/logo-white-red.svg" alt="čsfd">
+                </a>
+                <a href="https://www.rottentomatoes.com/m/star_wars_episode_iii_revenge_of_the_sith">
+                    <img class="footerImages" src="https://www.rottentomatoes.com/assets/pizza-pie/images/rottentomatoes_logo_40.336d6fe66ff.png">
+                </a>
+                <a href="https://www.disneyplus.com/sk-sk/browse/entity-eb1e2c5f-69bf-4240-a61f-7ffc4e0311b3">
+                    <img class="footerImages" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Disney_Plus_logo.svg/2560px-Disney_Plus_logo.svg.png" alt="Disney+ logo">
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
 
 <script src="indexJS.js"></script>
 </body>
