@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
             closePopupFunc();
         }
     });
-    // You can customize and expand these functions based on your specific requirements.
 });
 
 function agree() {
