@@ -354,7 +354,7 @@ body.animate .header #title, body.animate .header #logo{
     padding-left: 1vw;
     padding-right: 1vw;
 }
-a{
+.reviewText a{
     text-decoration: none;
     color: #2af6ef;
     font-weight: bolder;
@@ -370,18 +370,17 @@ a{
 }
 
 .footer{
-    background: black;
     color: white;
     text-align: center;
     margin-left: auto;
-    margin-right: auto;
     font-size: 1vw;
     font-family: 'Franklin Gothic Demi', sans-serif;
     padding: 1vw;
-    position: relative;
     bottom: 0;
     width: 40%;
-    float: right;
+    height: 27vw;
+    float: none;
+
 }
 .footerImages{
     margin-left: auto;
@@ -401,4 +400,147 @@ a{
 }
 .footerImages:hover{
     transform: scale(1.1);
+}
+
+.listsHolder{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1vw 3vw 1vw 2vw;
+}
+
+.listsHolder{
+
+}
+.movies{
+    margin-top: 5vw;
+    color: whitesmoke;
+    font-size: 1vw;
+    display: block;
+    padding: 0 1vw 1vw 1vw;
+    border: #ffd730 1px solid;
+    border-radius: 1vw;
+    width: fit-content;
+    float: left;
+    margin-right: 2vw;
+}
+
+#moviesOrder{
+    color: lightgrey;
+    font-family: 'Franklin Gothic Demi', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.series{
+    margin-top: 5vw;
+    color: whitesmoke;
+    font-size: 1vw;
+    display: block;
+    padding: 0 1vw 1vw 1vw;
+    border: #ffd730 1px solid;
+    border-radius: 1vw;
+    width: fit-content;
+    float: left;
+    margin-right: 2vw;
+}
+#Series{
+    color: lightgrey;
+    font-family: 'Franklin Gothic Demi', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: underline;
+
+}
+.tierlist img{
+    width: auto;
+    height: 10vw;
+    border-radius: 1vw;
+    border: #3e3e3e 4px solid;
+}
+.tierlist{
+    background: #3e3e3e;
+    border-radius: 1vw;
+    border: #3e3e3e 4px solid;
+    width: 58%;
+    color: #2b2b2b;
+    align-items: center;
+
+}
+.tierlist img:hover {
+    transform: scale(1.5);
+    transition: 0.2s;
+}
+
+th, td {
+    border-right: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+#tierListTitle{
+    color: #ffe81f;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Demi', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+
+.ende{
+    height: 2vw;
+}
+#endeText{
+    color: #ffe81f;
+    width: fit-content;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Demi', sans-serif;
+    font-weight: bolder;
+    margin-right: auto;
+    margin-left: auto;
+}
+.links{
+    margin-left:auto;
+    margin-right: auto;
+    display: flex;
+    padding: 1vw 0 1vw 0 ;
+    width: fit-content;
+}
+#linksTitle{
+    color: #ffe81f;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Demi', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+.info{
+    width: fit-content;
+    margin-right: auto;
+
+}
+
+.images{
+    width: fit-content;
+    padding: 5px;
+    margin-right: auto;
+    padding-left: 2vw;
+
+
+}
+
+.links a{
+    text-decoration: underline;
+    color: #2af6ef;
+    font-weight: lighter;
+    font-size: 1vw;
+    width: fit-content;
+}
+.images a{
+    text-decoration: underline;
+    color: #2af6ef;
+    font-weight: lighter;
+    font-size: 1vw;
+    width: fit-content;
+
 }
