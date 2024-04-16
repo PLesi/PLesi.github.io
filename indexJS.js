@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const popupOverlay = document.getElementById('popupOverlay');
     const closePopup = document.getElementById('closePopup');
-    // Function to open the popup
     function openPopup() {
         popupOverlay.style.display = 'block';
     }
@@ -9,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
         popupOverlay.style.display = 'none';
         document.body.classList.add('animate')
     }
-
-
   openPopup();
     closePopup.addEventListener('click', closePopupFunc);
     popupOverlay.addEventListener('click', function (event) {
@@ -154,7 +151,6 @@ function scrollFun(){
     let title = document.getElementById("title");
     let header = document.getElementById("header");
     let blueText = document.getElementById("blueText");
-    let star = document.getElementsByClassName("star");
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
         logo.style.marginLeft = "0";
         logo.style.height = "5.5vw";
